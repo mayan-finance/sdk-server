@@ -15,7 +15,10 @@
 				"<node_internals>/**"
 			],
 			"type": "node",
-			"outputCapture": "std"
+			"outputCapture": "std",
+			"env": {
+				"SOLANA_RPC_URL": "https://api.mainnet-beta.solana.com"
+			}
 		},
     ]
 }

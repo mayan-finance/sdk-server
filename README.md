@@ -2,9 +2,7 @@
 
 # examples
 
-- solana: `curl --request GET \
-  --url 'http://localhost:3000/solana?amountIn=0.5&fromToken=0x0000000000000000000000000000000000000000&toToken=0x0000000000000000000000000000000000000000&fromChain=solana&toChain=base&slippageBps=300&gasDrop=0.001&referrerBps=5&evmReferrer=0x4294844b7447A16f58E581F312dEDfd726157B27&solanaReferrer=Bv4jL8FWnqCCaZtUCFRqPdhCVp5vDsndh2aRduq4kc3V&swapperAddress=9xZJpqWx4Rzx5Mxxyxp1HXrNtbcZVZjfSftRr2aMWT88&destAddress=0x28A328C327307ab1b180327234fDD2a290EFC6DE&relayerAddress=3S39HueCTJqS3bm1gk1wnoDgLji7eGQoA99jsKvTgKoi' \
-  --header 'User-Agent: insomnia/9.3.2'`
+- solana: `curl --request GET  --url 'http://localhost:3000/solana?amountIn=0.5&fromToken=0x0000000000000000000000000000000000000000&toToken=0x0000000000000000000000000000000000000000&fromChain=solana&toChain=base&slippageBps=auto&gasDrop=0&referrerBps=5&evmReferrer=0x4294844b7447A16f58E581F312dEDfd726157B27&solanaReferrer=Bv4jL8FWnqCCaZtUCFRqPdhCVp5vDsndh2aRduq4kc3V&swapperAddress=9xZJpqWx4Rzx5Mxxyxp1HXrNtbcZVZjfSftRr2aMWT88&destAddress=0x28A328C327307ab1b180327234fDD2a290EFC6DE&relayerAddress=3S39HueCTJqS3bm1gk1wnoDgLji7eGQoA99jsKvTgKoi&suiReferrer=0x80ab7e051d43f385b4346ae1a79c3a050cb40c5b99f9d1a95ec936945e7b9df2&useSeparateSwapTx=false' --header 'User-Agent: insomnia/9.3.2'`
     - returns transaction data including instructions and address lookup tables
 - evm for gasless (with permit): `curl --request GET \
   --url 'http://localhost:3000/evm-gasless?amountIn=5&fromToken=0xaf88d065e77c8cc2239327c5edb3a432268e5831&toToken=0x0000000000000000000000000000000000000000&fromChain=arbitrum&toChain=base&slippageBps=300&gasDrop=0.001&referrerBps=5&evmReferrer=0x28A328C327307ab1b180327234fDD2a290EFC6DE&solanaReferrer=Bv4jL8FWnqCCaZtUCFRqPdhCVp5vDsndh2aRduq4kc3V&swapperAddress=0x28A328C327307ab1b180327234fDD2a290EFC6DE&destAddress=0x28A328C327307ab1b180327234fDD2a290EFC6DE&signerAddress=0x4294844b7447A16f58E581F312dEDfd726157B27&permitR=0x00&permitS=0x00&permitV=0&permitValue=0' \

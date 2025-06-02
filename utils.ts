@@ -76,6 +76,9 @@ const chains: { [index in ChainName]: number }  = {
 	optimism: 24,
 	base: 30,
 	aptos: 22,
+	unichain: 44,
+	linea: 38,
+	sui: 21,
 };
 
 export function getWormholeChainIdByName(chain: string) : number | null {
