@@ -5,12 +5,14 @@
         "target": "ES2016", // ECMAScript version
         "module": "commonjs", // Module system
         "strict": true, // Enable strict mode
-        "esModuleInterop": true // Allow interop between CommonJS and ES Modules
+        "esModuleInterop": true, // Allow interop between CommonJS and ES Modules
+        "skipLibCheck": true, // Skip type checking of declaration files
     },
     "include": [
         "./**/*.ts"
     ], // Include all TypeScript files
     "exclude": [
-        "node_modules"
+        "node_modules",
+        "./**/index.d.ts",
     ] // Exclude dependencies
 }
