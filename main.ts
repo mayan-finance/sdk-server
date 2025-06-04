@@ -93,9 +93,10 @@ app.get("/solana", async (req: Request, res: Response) => {
       swiftQuote!.relayer = relayerAddress;
     }
 
+    let selectedQuote = quotes[0];
 
     const result = await createSwapFromSolanaInstructions(
-      swiftQuote!,
+      selectedQuote!,
       swapperWallet,
       destAddress,
       {
@@ -184,6 +185,7 @@ app.get("/solana", async (req: Request, res: Response) => {
 
     res.json({
       transactionDatas: allTransactions,
+      selectedQuote,
     });
   } catch (err: any) {
     console.error(err, err.stack);
